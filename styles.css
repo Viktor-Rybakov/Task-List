@@ -1,0 +1,148 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.fix-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 960px;
+  height: 100%;
+}
+
+.left-column {
+  min-width: 470px;
+}
+
+.right-column {
+  min-width: 470px;
+}
+
+.heading {
+  font-style: 21px;
+  font-weight: 400;
+}
+
+.form-container {
+  height: 500px;
+  margin: 0;
+  padding: 49px 0 0 0;
+  background-color: #ffffff;
+  border: none;
+}
+
+#task-name__field,
+#task-description__field {
+  display: block;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #ebebeb;
+  background-color: #f9f9f9;
+}
+
+#task-name__field {
+  width: 390px;
+  height: 45px;
+  padding: 0 15px 0 15px;
+  margin: 0 auto 28px auto;
+}
+
+#task-description__field {
+  width: 390px;
+  height: 230px;
+  padding: 15px;
+  margin: 0 auto 28px auto;
+  resize: none;
+  font-family: Arial;
+}
+
+.task-name__label {
+  margin: 0 0 11px 40px;
+}
+
+.task-description__label {
+  margin: 0 0 30px 40px;
+}
+
+.task-name__label,
+.task-description__label {
+  color: #8993ad;
+}
+
+.add-task-button {
+  display: block;
+  width: 224px;
+  height: 55px;
+  margin: 0 auto 30px 40px;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #2174fd;
+  border: none;
+}
+
+.task-item {
+  background-color: #ffffff;
+  display: none;
+}
+
+.task-item__name-flex-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.4);
+}
+
+
+.task-item__name-container {
+  width: 100%;
+  padding: 0 20px;
+
+}
+
+.task-item__name {
+  float: left;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.task-item__clear,
+.task-item__open {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.task-item__clear {
+  float: left;
+}
+
+.task-item__open {
+  float: right;
+}
+
+
+.task-item__description {
+  height: 85px;
+  padding: 10px 20px;
+  overflow: hidden;
+  color: #8993ad;
+}
+
+.empty-list {
+  padding-top: 47px;
+  font-size: 16px;
+  color: #8993ad;
+}

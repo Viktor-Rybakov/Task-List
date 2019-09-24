@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <title>Список дел</title>
+</head>
+
+<body>
+  <div class="fix-container">
+    <div class="left-column">
+      <h2 class="heading">Список дел:</h2>
+
+      <div class="empty-list">
+          Список пуст...
+      </div>
+
+      <div class="task-item">
+        <div class="task-item__name-flex-container">
+          <div class="task-item__name-container">
+            <div class="task-item__name">
+              Купить лошадь
+            </div>
+
+            <button class="task-item__clear">
+              <img class="task-item__clear-img" src="img/clear-button.png" alt="close">
+            </button>
+
+            <button class="task-item__open">
+              <img class="task-item__open-img" src="img/arrow.png" alt="open">
+            </button>
+          </div>
+        </div>
+
+        <div class="task-item__description">
+          По цене 300 т.р. за штуку
+        </div>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <form>
+        <h2 class="heading">Добавить новое дело</h2>
+
+        <fieldset class="form-container">
+          <p class="task-name__label">
+            <label for="task-name__field">* Название</label>
+          </p>
+
+          <input id="task-name__field" type="text" name="task-name" required>
+
+          <p class="task-description__label">
+            <label for="task-description__field">* Описание</label>
+          </p>
+
+          <textarea id="task-description__field" name="task-description" required></textarea>
+
+          <button class="add-task-button" type="button">Добавить дело</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
