@@ -1,13 +1,16 @@
 body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Arial;
   font-size: 14px;
 }
 
 body {
   background-color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .fix-container {
@@ -17,6 +20,10 @@ body {
   padding-top: 50px;
   width: 960px;
   height: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .left-column {
@@ -35,7 +42,7 @@ body {
 .form-container {
   height: 500px;
   margin: 0;
-  padding: 49px 0 0 0;
+  padding: 29px 0 0 0;
   background-color: #ffffff;
   border: none;
 }
@@ -71,7 +78,7 @@ body {
 }
 
 .task-description__label {
-  margin: 0 0 30px 40px;
+  margin: 0 0 9px 40px;
 }
 
 .task-name__label,
@@ -90,9 +97,16 @@ body {
   border: none;
 }
 
+.task-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+
 .task-item {
+  margin-bottom: 20px;
   background-color: #ffffff;
-  display: none;
 }
 
 .task-item__name-flex-container {
@@ -146,3 +160,4 @@ body {
   font-size: 16px;
   color: #8993ad;
 }
+
