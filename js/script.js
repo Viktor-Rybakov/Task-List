@@ -2,6 +2,18 @@ $(function(){
 
   $('.add-task-button').on('click', function(){
 
+    //Проверка содержимого поля #task-name__field
+    if ($('#task-name__field').val() == '') {
+      alert('Заполните имя задачи');
+      return false;
+    };
+
+    //Проверка содержимого поля #task-description__field
+    if ($('#task-description__field').val() == '') {
+      alert('Заполните описание задачи');
+      return false;
+    };
+
     //Записываю содержимое полей в переменные
     var task_name = $('#task-name__field').val();
     var task_description = $('#task-description__field').val();
