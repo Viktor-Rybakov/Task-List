@@ -8,20 +8,15 @@ $(function(){
 
     $('.task-list').append('<li class="task-list__item"></li>');
     $('.task-list__item').last().append('<div class="task-item"></div>');
-    $('.task-item').last().append('<div class="task-item__name-flex-container"></div>');
-    $('.task-item__name-flex-container').last().append('<div class="task-item__name-container"></div>');
-    $('.task-item__name-container').last().append('<div class="task-item__name"></div>');
+    $('.task-item').last().append('<div class="task-item__name-container flex-container"></div>');
+    $('.task-item__name-container.flex-container').last().append('<div class="flex-container"></div>');
+    $('.flex-container').last().append('<div class="task-item__name"></div>');
     $('.task-item__name').last().text(task_name);
-    $('.task-item__name-container').last().append('<button class="task-item__clear">');
-    $('.task-item__clear').last().append('<img class="task-item__clear-img" src="img/clear-button.png" alt="close">');
-    $('.task-item__name-container').last().append('<button class="task-item__open"></button>');
-    $('.task-item__open').last().append('<img class="task-item__open-img" src="img/arrow.png" alt="open"></img>');
-    $('.task-item').last().append('<div class="task-item__description">');
+    $('.flex-container').last().append('<button class="task-item__clear" type="button" aria-label="Удалить дело"></button>');
+    $('.task-item__name-container.flex-container').last().append('<button class="task-item__open" type="button" aria-label="Раскрыть дело"></button>');
+    $('.task-item').last().append('<div class="task-item__description"></div>');
     $('.task-item__description').last().text(task_description);
     
   });
-
-
-
 
 });
