@@ -33,7 +33,7 @@ body {
 }
 
 .left-column {
-  min-width: 470px;
+  width: 470px;
 }
 
 .right-column {
@@ -109,7 +109,6 @@ body {
   list-style-type: none;
 }
 
-
 .task-item {
   margin-bottom: 20px;
   background-color: #ffffff;
@@ -123,7 +122,7 @@ body {
 .task-item__name-container {
   width: 100%;
   padding: 0 20px;
-  height: 50px;
+  min-height: 50px;
   border-bottom: 1px solid rgba(235, 235, 235, 0.4);
 }
 
