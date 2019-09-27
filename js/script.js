@@ -19,4 +19,8 @@ $(function(){
     
   });
 
+  $('.task-list').on('click', '.task-item__clear', function(){
+    $(this).closest('.task-list__item').remove();
+  });
+
 });
