@@ -13,6 +13,17 @@ body {
   box-sizing: border-box;
 }
 
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
 .fix-container {
   display: flex;
   justify-content: space-between;
@@ -45,16 +56,21 @@ body {
   font-weight: 400;
 }
 
-.form-container {
+.task-form {
+  padding: 29px 40px 30px 40px;
   height: 500px;
-  margin: 0;
-  padding: 29px 0 0 0;
   background-color: #ffffff;
+  
+}
+
+.form-container {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
-#task-name__field,
-#task-description__field {
+.task-name__field,
+.task-description__field {
   display: block;
   box-sizing: border-box;
   font-size: 16px;
@@ -63,14 +79,14 @@ body {
   background-color: #f9f9f9;
 }
 
-#task-name__field {
+.task-name__field {
   width: 390px;
   height: 45px;
   padding: 0 15px 0 15px;
   margin: 0 auto 28px auto;
 }
 
-#task-description__field {
+.task-description__field {
   width: 390px;
   height: 230px;
   padding: 15px;
@@ -79,12 +95,10 @@ body {
   font-family: Arial;
 }
 
-.task-name__label {
-  margin: 0 0 11px 40px;
-}
-
+.task-name__label,
 .task-description__label {
-  margin: 0 0 9px 40px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .task-name__label,
@@ -96,7 +110,6 @@ body {
   display: block;
   width: 224px;
   height: 55px;
-  margin: 0 auto 30px 40px;
   color: #ffffff;
   font-size: 16px;
   background-color: #2174fd;
@@ -115,6 +128,7 @@ body {
 }
 
 .task-item__name {
+  margin: 0;
   font-size: 16px;
   font-weight: bold;
 }
@@ -126,7 +140,6 @@ body {
   border-bottom: 1px solid rgba(235, 235, 235, 0.4);
 }
 
-
 .task-item__clear,
 .task-item__open {
   display: block;
@@ -134,21 +147,25 @@ body {
   padding: 0;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .task-item__clear {
   margin-left: 15px;
   background-image: url('img/clear-button.png');
-  height: 9px;
-  width: 9px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
 }
 
 .task-item__open {
   background-image: url('img/arrow.png');
-  height: 6px;
-  width: 5px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
 }
-
 
 .task-item__description {
   height: 85px;
