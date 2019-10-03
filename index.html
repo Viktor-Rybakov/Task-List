@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/left-column.css">
+  <link rel="stylesheet" href="css/right-column.css">
   <title>Список дел</title>
 </head>
 
@@ -12,19 +15,19 @@
     <div class="fix-container">
       <h1 class="visually-hidden">Ваш список дел</h1>
       <section class="left-column">
-        <h2 class="heading">Список дел:</h2>
+        <h2 class="left-column__heading">Список дел:</h2>
 
         <p class="empty-list">
           Список пуст...
         </p>
 
         <ul class="task-list">
-          <li class="task-list__item">
+          <!-- <li class="task-list__item">
           <article class="task-item">
-            <header class="task-item__name-container flex-container">
+            <header class="task-item__header flex-container">
               <div class="flex-container">
                 <h3 class="task-item__name">Купить лошадь</h3>
-                <button class="task-item__clear" type="button" aria-label="Удалить дело"></button>
+                <button class="task-item__delete" type="button" aria-label="Удалить дело"></button>
               </div>
 
               <button class="task-item__open" type="button" aria-label="Раскрыть дело"></button>
@@ -32,27 +35,27 @@
 
             <p class="task-item__description">По цене 300 т.р. за штуку</p>
           </article>
-        </li>
+        </li> -->
         </ul>
       </section>
 
       <section class="right-column">
-        <h2 class="heading">Добавить новое дело</h2>
+        <h2 class="right-column__heading">Добавить новое дело</h2>
         <form class="task-form">
           <fieldset class="form-container">
             <label for="task-name__field">
               <p class="task-name__label">* Название</p>
             </label>
 
-            <input class="task-name__field" type="text" name="task-name" required>
+            <input id="task-name__field" type="text" name="task-name" required>
 
             <label for="task-description__field">
               <p class="task-description__label">* Описание</p>
             </label>
 
-            <textarea class="task-description__field" name="task-description" required></textarea>
+            <textarea id="task-description__field" name="task-description" required></textarea>
 
-            <button class="add-task-button" type="submit">Добавить дело</button>
+            <button class="add-task-button" type="button">Добавить дело</button>
           </fieldset>
         </form>
       </section>

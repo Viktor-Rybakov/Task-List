@@ -1,0 +1,81 @@
+.left-column {
+  width: 470px;
+}
+
+.left-column__heading {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.empty-list {
+  margin: 0;
+  padding-top: 47px;
+
+  font-size: 16px;
+  color: #8993ad;
+}
+
+.task-list {
+  margin: 0;
+  padding: 0;
+  
+  list-style-type: none;
+}
+
+.task-list__item {
+  margin-bottom: 20px;
+}
+
+.task-item {
+  background-color: #ffffff;
+}
+
+.task-item__header {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 20px;
+  
+  border-bottom: 1px solid rgba(235, 235, 235, 0.4);
+}
+
+.task-item__name {
+  margin: 0 15px 0 0 ;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.task-item__delete,
+.task-item__open {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border: none;
+
+  cursor: pointer;
+}
+
+.task-item__delete {
+  background-image: url('../img/clear-button.png');
+}
+
+.task-item__open {
+  background-image: url('../img/arrow.png');
+}
+
+.task-item__description {
+  height: 85px;
+  margin: 0;
+  padding: 10px 20px;
+
+  color: #8993ad;
+
+  overflow: hidden;
+}
+
