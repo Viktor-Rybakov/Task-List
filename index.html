@@ -17,11 +17,11 @@
       <section class="left-column">
         <h2 class="left-column__heading">Список дел:</h2>
 
-        <p class="empty-list">
+        <p class="empty-list js-empty-list">
           Список пуст...
         </p>
 
-        <ul class="task-list">
+        <ul class="task-list js-task-list">
           <!-- <li class="task-list__item">
           <article class="task-item">
             <header class="task-item__header flex-container">
@@ -41,21 +41,21 @@
 
       <section class="right-column">
         <h2 class="right-column__heading">Добавить новое дело</h2>
-        <form class="task-form">
+        <form class="task-form js-task-form">
           <fieldset class="form-container">
             <label for="task-name__field">
               <p class="task-name__label">* Название</p>
             </label>
 
-            <input id="task-name__field" type="text" name="task-name" required>
+            <input id="task-name__field" class="js-task-name__field" type="text" name="task-name" required>
 
             <label for="task-description__field">
               <p class="task-description__label">* Описание</p>
             </label>
 
-            <textarea id="task-description__field" name="task-description" required></textarea>
+            <textarea id="task-description__field" class="js-task-description__field" name="task-description" required></textarea>
 
-            <button class="add-task-button" type="button">Добавить дело</button>
+            <button class="add-task-button js-add-task-button" type="submit">Добавить дело</button>
           </fieldset>
         </form>
       </section>
