@@ -33,12 +33,13 @@
 .task-item__header {
   width: 100%;
   min-height: 50px;
-  padding: 0 20px;
+  padding: 10px 20px;
   
   border-bottom: 1px solid rgba(235, 235, 235, 0.4);
 }
 
 .task-item__name {
+  max-width: 370px;
   margin: 0 15px 0 0 ;
 
   font-size: 16px;
@@ -70,7 +71,7 @@
 }
 
 .task-item__description {
-  height: 85px;
+  min-height: 85px;
   margin: 0;
   padding: 10px 20px;
 
@@ -79,3 +80,7 @@
   overflow: hidden;
 }
 
+.rotate {
+  transition-delay: 0.2s;
+  transform: rotate(90deg);
+}

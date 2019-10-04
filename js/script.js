@@ -41,8 +41,32 @@ $(function(){
   });
 
   //Клик на кнопке удаления задачи
-  $('.js-task-list').on('click', '.js-task-item__delete', function(){
+  task_list_Elem.on('click', '.js-task-item__delete', function(){
     $(this).closest('.js-task-list__item').remove();
+  });
+
+  //Cворачивание задачи
+  task_list_Elem.on('click', '.js-task-item__open', function(){
+    $(this).addClass('rotate');
+    $(this).closest('.js-task-item').children('.task-item__description')
+      .animate({
+        'height': 0,
+        'min-height': 0,
+        'padding-top': 0,
+        'padding-bottom': 0
+      }, 300);
+  });
+
+  //Разворачивание задачи
+  task_list_Elem.on('click', '.js-task-item__open.rotate', function(){
+    $(this).removeClass('rotate');
+    $(this).closest('.js-task-item').children('.task-item__description')
+      .animate({
+        'height': '100%',
+        'min-height': '85px',
+        'padding-top': '10px',
+        'padding-bottom': '10px'
+      }, 300);
   });
 
 });
