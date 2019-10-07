@@ -1,6 +1,6 @@
 .right-column {
+  float: right;
   min-width: 470px;
-  margin-top: 50px;
 }
 
 .right-column__heading {

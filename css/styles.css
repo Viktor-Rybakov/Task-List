@@ -22,6 +22,10 @@ body.modal-active {
   overflow: hidden;
 }
 
+main {
+  padding-top: 50px;
+}
+
 img {
   max-width: 100%;
 }
@@ -49,8 +53,8 @@ a {
 }
 
 .fix-container {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   width: 960px;
   margin: 0 auto;  
 }

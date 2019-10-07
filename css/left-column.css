@@ -1,6 +1,6 @@
 .left-column {
+  float: left;
   min-width: 470px;
-  margin-top: 50px;
 }
 
 .left-column__heading {
@@ -60,12 +60,9 @@
   border: none;
 
   cursor: pointer;
-  outline: none;
 }
 
 .task-item__delete {
-  margin-right: auto;
-
   background-image: url('../img/clear-button.png');
 }
 
@@ -86,6 +83,6 @@
 }
 
 .rotate {
-  transition-delay: 0.2s;
+  transition-duration: 0.3s;
   transform: rotate(90deg);
 }

@@ -14,23 +14,19 @@ $(function() {
     emptyListElem.addClass('hidden');
 
     //Генерирую элементы HTML
-    taskListElem.append('<li class="task-list__item js-task-list__item"></li>');
-    $('.js-task-list__item')
-      .last()
-      .append('<article class="task-item js-task-item"></article>');
-    $('.js-task-item')
-      .last()
-      .append('<header class="task-item__header js-task-item__header flex-container"></header>')
-      .append(`<p class="task-item__description js-task-item__description">
-        ${taskDescription}
-        </p>`);
-    $('.js-task-item__header')
-      .last()
-      .append(`<h3 class="task-item__name js-task-item__name">
-        ${taskName}
-        </h3>`)
-      .append('<button class="task-item__delete js-task-item__delete" type="button" aria-label="Удалить дело"></button>')
-      .append('<button class="task-item__open js-task-item__open" type="button" aria-label="Свернуть описание"></button>');
+    taskListElem.append(`
+      <li class="task-list__item js-task-list__item">
+        <article class="task-item js-task-item">
+          <header class="task-item__header js-task-item__header flex-container">
+            <h3 class="task-item__name js-task-item__name">${taskName}</h3>
+            <button class="task-item__delete js-task-item__delete" type="button" aria-label="Удалить дело"></button>
+            <button class="task-item__open js-task-item__open" type="button" aria-label="Свернуть описание"></button>
+          </header>
+
+          <p class="task-item__description js-task-item__description">${taskDescription}</p>
+        </article>
+      </li>
+    `);
 
     //Очищаю форму
     taskFormElem[0].reset();
@@ -51,8 +47,9 @@ $(function() {
     $(this)
       .closest('.js-task-item')
       .children('.task-item__description')
-      .slideToggle(300, function(){
-
+      .slideToggle({
+        duration: 300,
+        easing: 'linear'
       });
 
   });
