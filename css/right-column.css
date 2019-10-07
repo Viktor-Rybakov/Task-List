@@ -1,5 +1,6 @@
 .right-column {
   min-width: 470px;
+  margin-top: 50px;
 }
 
 .right-column__heading {
@@ -21,8 +22,8 @@
   border: none;
 }
 
-#task-name__field,
-#task-description__field {
+.task-name__field,
+.task-description__field {
   display: block;
   font-size: 16px;
   font-weight: bold;
@@ -31,14 +32,14 @@
   border: 1px solid #ebebeb;
 }
 
-#task-name__field {
+.task-name__field {
   width: 390px;
   height: 45px;
   margin: 0 auto 28px auto;
   padding: 0 15px 0 15px;
 }
 
-#task-description__field {
+.task-description__field {
   width: 390px;
   height: 230px;
   margin: 0 auto 28px auto;

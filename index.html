@@ -23,19 +23,16 @@
 
         <ul class="task-list js-task-list">
           <!-- <li class="task-list__item">
-          <article class="task-item">
-            <header class="task-item__header flex-container">
-              <div class="flex-container">
+            <article class="task-item">
+              <header class="task-item__header flex-container">
                 <h3 class="task-item__name">Купить лошадь</h3>
                 <button class="task-item__delete" type="button" aria-label="Удалить дело"></button>
-              </div>
+                <button class="task-item__open" type="button" aria-label="Свернуть описание"></button>
+              </header>
 
-              <button class="task-item__open" type="button" aria-label="Раскрыть дело"></button>
-            </header>
-
-            <p class="task-item__description">По цене 300 т.р. за штуку</p>
-          </article>
-        </li> -->
+              <p class="task-item__description">По цене 300 т.р. за штуку</p>
+            </article>
+          </li> -->
         </ul>
       </section>
 
@@ -43,17 +40,19 @@
         <h2 class="right-column__heading">Добавить новое дело</h2>
         <form class="task-form js-task-form">
           <fieldset class="form-container">
-            <label for="task-name__field">
-              <p class="task-name__label">* Название</p>
-            </label>
+            <p class="task-name__label">
+              <label for="task-name__field">* Название</label>
+            </p>
 
-            <input id="task-name__field" class="js-task-name__field" type="text" name="task-name" required>
+            <input id="task-name__field" class="task-name__field js-task-name__field" type="text" name="task-name"
+              required>
 
-            <label for="task-description__field">
-              <p class="task-description__label">* Описание</p>
-            </label>
+            <p class="task-description__label">
+              <label for="task-description__field">* Описание</label>
+            </p>
 
-            <textarea id="task-description__field" class="js-task-description__field" name="task-description" required></textarea>
+            <textarea id="task-description__field" class="task-description__field js-task-description__field"
+              name="task-description" required></textarea>
 
             <button class="add-task-button js-add-task-button" type="submit">Добавить дело</button>
           </fieldset>
