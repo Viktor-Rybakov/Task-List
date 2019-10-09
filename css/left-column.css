@@ -70,12 +70,13 @@
   margin-left: auto;
 
   background-image: url('../img/arrow.png');
+
+  transition-duration: 0.3s;
 }
 
 .task-item__description {
-  min-height: 85px;
   margin: 0;
-  padding: 10px 20px;
+  padding: 20px 20px;
 
   color: #8993ad;
 
@@ -83,6 +84,6 @@
 }
 
 .rotate {
-  transition-duration: 0.3s;
+  
   transform: rotate(90deg);
 }

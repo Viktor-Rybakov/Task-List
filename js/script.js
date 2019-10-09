@@ -6,6 +6,8 @@ $(function() {
   var taskListElem = $(".js-task-list");
 
   taskFormElem.on("submit", function() {
+    event.preventDefault();
+
     //Записываю содержимое полей в переменные
     var taskName = taskNameElem.val();
     var taskDescription = taskDescriptionElem.val();
@@ -23,15 +25,13 @@ $(function() {
             <button class="task-item__open js-task-item__open" type="button" aria-label="Свернуть описание"></button>
           </header>
 
-          <p class="task-item__description js-task-item__description">${taskDescription}</p>
+          <p class="task-item__description js-task-item__description" aria-expanded="true">${taskDescription}</p>
         </article>
       </li>
     `);
 
     //Очищаю форму
     taskFormElem[0].reset();
-
-    event.preventDefault();
   });
 
   //Удаление задачи
@@ -43,14 +43,28 @@ $(function() {
 
   //Cворачивание задачи
   taskListElem.on('click', '.js-task-item__open', function() {
-    $(this).toggleClass('rotate');
-    $(this)
-      .closest('.js-task-item')
-      .children('.task-item__description')
-      .slideToggle({
+
+    var taskItemOpenElem = $(this);
+    var taskItemDescriptionElem = $(this).closest('.js-task-item').children('.task-item__description');
+
+    taskItemOpenElem.toggleClass('rotate');
+
+    if ( taskItemOpenElem.attr('aria-label') === 'Свернуть описание' ) {
+      taskItemOpenElem.attr('aria-label', 'Развернуть описание')
+    } else if ( taskItemOpenElem.attr('aria-label') === 'Развернуть описание' ) {
+      taskItemOpenElem.attr('aria-label', 'Свернуть описание')
+    };
+
+    taskItemDescriptionElem.slideToggle({
         duration: 300,
         easing: 'linear'
       });
+
+    if ( taskItemDescriptionElem.attr('aria-expanded') === 'true') {
+      taskItemDescriptionElem.attr('aria-expanded', 'false')
+    } else if ( taskItemDescriptionElem.attr('aria-expanded') === 'false') {
+      taskItemDescriptionElem.attr('aria-expanded', 'true')
+    };
 
   });
 
