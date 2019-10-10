@@ -22,10 +22,10 @@ $(function() {
           <header class="task-item__header js-task-item__header flex-container">
             <h3 class="task-item__name js-task-item__name">${taskName}</h3>
             <button class="task-item__delete js-task-item__delete" type="button" aria-label="Удалить дело"></button>
-            <button class="task-item__open js-task-item__open" type="button" aria-label="Свернуть описание"></button>
+            <button class="task-item__open js-task-item__open" type="button" aria-label="Свернуть описание" aria-expanded="true" aria-controls=".task-item__description"></button>
           </header>
 
-          <p class="task-item__description js-task-item__description" aria-expanded="true">${taskDescription}</p>
+          <p class="task-item__description js-task-item__description">${taskDescription}</p>
         </article>
       </li>
     `);
@@ -51,7 +51,7 @@ $(function() {
 
     if ( taskItemOpenElem.attr('aria-label') === 'Свернуть описание' ) {
       taskItemOpenElem.attr('aria-label', 'Развернуть описание')
-    } else if ( taskItemOpenElem.attr('aria-label') === 'Развернуть описание' ) {
+    } else {
       taskItemOpenElem.attr('aria-label', 'Свернуть описание')
     };
 
@@ -60,10 +60,10 @@ $(function() {
         easing: 'linear'
       });
 
-    if ( taskItemDescriptionElem.attr('aria-expanded') === 'true') {
-      taskItemDescriptionElem.attr('aria-expanded', 'false')
-    } else if ( taskItemDescriptionElem.attr('aria-expanded') === 'false') {
-      taskItemDescriptionElem.attr('aria-expanded', 'true')
+    if ( taskItemOpenElem.attr('aria-expanded') === 'true') {
+      taskItemOpenElem.attr('aria-expanded', 'false')
+    } else {
+      taskItemOpenElem.attr('aria-expanded', 'true')
     };
 
   });
